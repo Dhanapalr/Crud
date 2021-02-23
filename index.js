@@ -18,8 +18,9 @@ app.set('views','views')
 
 app.use('/',userroutes)
 app.use('/export',excelroute)
+const URL=process.env.Mongo_DB;
 const mongoose=require('mongoose');
-mongoose.connect('mongodb://localhost/users', {useFindAndModify:false,useNewUrlParser: true, useUnifiedTopology: true,useCreateIndex: true }).then(()=>{
+mongoose.connect(URL, {useFindAndModify:false,useNewUrlParser: true, useUnifiedTopology: true,useCreateIndex: true }).then(()=>{
     console.log('connected successfully')
 }).catch((e)=>{
     console.log('Not connected')
