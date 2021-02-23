@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{Title}}</title>
+    <style>
+body {background-color: powderblue;}
+h1   {color: blue;}
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+<script src="/Js/script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Om Namashiavaya</h1>
+    </header>
+    <div id="error"><ul>
+  {{#each Error}}
+    <li>{{this}}</li>
+  {{/each}}
+</ul></div>
+    <br><Br>
+    
+<div id="searchuser" style="display:{{display}}" > 
+       <form action="/delete" method="get">
+       <input type="search" name="cable_id" id="cable_id">
+       <input type="submit" value="search">
+       </form>
+   </div>
+
+<div id="delete form" style="display: {{dispupdate}};">
+
+ <form action="/deleteuser" method="post">
+       <input type="text" name="cable_id" id="cable_id" value="{{cable_id}}" readonly>
+
+       <input type="text" name="username" id="username" value="{{username}}" readonly>
+       <input type="number" name="price" id="price" value="{{price}}" readonly>
+       <input type="submit" value="delete">
+       </form>
+
+</div>
+
+</body>
+</html>

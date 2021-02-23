@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{Title}}</title>
+  <style>
+    body {
+      background-color: powderblue;
+    }
+
+    h1 {
+      color: blue;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid black;
+    }
+  </style>
+  <script src="/Js/script.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>CRUD </h1>
+  </header>
+  <div id="error">
+    <ul>
+      {{#each Error}}
+      <li>{{this}}</li>
+      {{/each}}
+    </ul>
+  </div>
+  <br><Br>
+  <form action="/register" method="post">
+    <label for="cable_id">Cable_id</label>
+    <input type="text" name="cable_id" id="cable_id" , value="{{cable_id}}">
+    <label for="username">Name</label>
+    <input type="text" name="username" id="username" value="{{username}}">
+    <label for="price">Price</label>
+    <input type="number" name="price" id="price" value="{{price}}">
+    <input type="submit" value="Add User">
+  </form>
+  <br><Br>
+
+  <div id="display" style="display: {{display}};align:center;">
+    <table>
+      <tr>
+        <th>CABLE_ID</th>
+        <th>NAME</th>
+        <th>PRICE</th>
+      </tr>
+      <tr>
+        {{#each data}}
+        <td>{{this}}</td>
+        {{/each}}
+      </tr>
+    </table>
+  </div>
+  <div>
+    <input type="button" value="Update User" onclick="update()">
+  </div>
+
+  <div>
+    <input type="button" value="delete User" onclick="deleteuser()">
+  </div>
+
+  <div>
+    <input type="button" value="Download" onclick="download()">
+  </div>
+
+</body>
+
+</html>

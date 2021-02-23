@@ -1,0 +1,328 @@
+
+
+<html>
+<head>
+
+<style>
+    header, footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+    font-size:40px;
+}
+.text{
+	font-size:100;
+	color:red;
+	
+}
+</style>
+<script>
+var i=1;
+function game(s)
+{
+	aa0=document.getElementById("a0").value;
+	aa1=document.getElementById("a1").value;
+	aa2=document.getElementById("a2").value;
+	bb0=document.getElementById("b0").value;
+	bb1=document.getElementById("b1").value;
+	bb2=document.getElementById("b2").value;
+	cc0=document.getElementById("c0").value;
+	cc1=document.getElementById("c1").value;
+	cc2=document.getElementById("c2").value;
+	
+	a=s;
+	if(a==1)
+	{
+		if(aa0=="")
+		{
+         if((i%2)==0)
+	      {   
+	          document.getElementById("a0").value="X";
+	              i++;
+	         }
+	     else
+		 {
+		 document.getElementById("a0").value="O";
+		 i++;
+		 }
+		}
+	}
+		if(a==2)
+	{
+		if(aa1=="")
+		{
+         if((i%2)==0)
+	      {
+	          document.getElementById("a1").value="X";
+	              i++;
+	         }
+	     else
+		 {
+		 document.getElementById("a1").value="O";
+		 i++;
+		 }
+		}
+	}
+	
+	
+	if(a==3)
+	{     if(aa2=="")
+		{
+         if((i%2)==0)
+	      {
+	          document.getElementById("a2").value="X";
+	              i++;
+	         }
+	     else
+		 {
+		 document.getElementById("a2").value="O";
+		 i++;
+		 }
+		}
+	}
+	
+	if(a==4)
+	{
+      if(bb0=="") 
+	  {
+	   if((i%2)==0)
+	      {
+	          document.getElementById("b0").value="X";
+	              i++;
+	         }
+	     else
+		 {
+		 document.getElementById("b0").value="O";
+		 i++;
+		 }
+	  }
+	}
+	
+	
+	if(a==5)
+	{
+		if(bb1=="") 
+	  {
+         if((i%2)==0)
+	      {
+	          document.getElementById("b1").value="X";
+	              i++;
+	         }
+	     else
+		 {
+		 document.getElementById("b1").value="O";
+		 i++;
+		 }
+	  }
+	}
+	
+	if(a==6)
+	{
+        if(bb2=="") 
+	  {  
+		  if((i%2)==0)
+	      {
+	          document.getElementById("b2").value="X";
+	              i++;
+	         }
+	     else
+		 {
+		 document.getElementById("b2").value="O";
+		 i++;
+		 }
+	  }
+	}
+	
+	if(a==7)
+	{
+		if(cc0=="") 
+	  {
+         if((i%2)==0)
+	      {
+	          document.getElementById("c0").value="X";
+	              i++;
+	         }
+	     else
+		 {
+		 document.getElementById("c0").value="O";
+		 i++;
+		 }
+	  }
+	}
+	if(a==8)
+	{
+		if(cc1=="") 
+	  {
+         if((i%2)==0)
+	      {
+	          document.getElementById("c1").value="X";
+	              i++;
+	         }
+	     else
+		 {
+		 document.getElementById("c1").value="O";
+		 i++;
+		 }
+	  }
+	}
+		 
+		 if(a==9)
+	{
+		if(cc2=="") 
+	  {
+         if((i%2)==0)
+	      {
+	          document.getElementById("c2").value="X";
+	              i++;
+	         }
+	     else
+		 {
+		 document.getElementById("c2").value="O";
+		 i++;
+		 }
+	  }
+	}
+}
+function bingo()
+{
+	aa0=document.getElementById("a0").value;
+	aa1=document.getElementById("a1").value;
+	aa2=document.getElementById("a2").value;
+	bb0=document.getElementById("b0").value;
+	bb1=document.getElementById("b1").value;
+	bb2=document.getElementById("b2").value;
+	cc0=document.getElementById("c0").value;
+	cc1=document.getElementById("c1").value;
+	cc2=document.getElementById("c2").value;
+	if(i>5)
+	{
+	if((aa0==bb0)&&(aa0==cc0))
+	{
+		if(aa0!=""&&bb0!=""&&cc0!=""){
+		alert('bingo!   '+aa0+'  wins');
+        window.location.reload();
+        }
+	}
+	 if((aa1==bb1)&&(aa1==cc1))
+	{
+		if(aa1!=""&&bb1!=""&&cc1!=""){
+		alert('bingo   '+aa1+'  wins');window.location.reload();}
+	}
+	if((aa2==bb2)&&(aa2==cc2))
+	{
+		if(aa2!=""&&bb2!=""&&cc2!=""){
+		alert('bingo   '+aa2+'  wins');window.location.reload();}
+	}
+	if((aa0==aa1)&&(aa0==aa2))
+	{
+		if(aa0!=""&&aa1!=""&&aa2!=""){
+		alert('bingo  '+aa0+'  wins');window.location.reload();}
+	}
+	if((bb0==bb1)&&(bb0==bb2))
+	{
+		if(bb0!=""&&bb1!=""&&bb2!=""){
+		alert('bingo  '+bb0+'  wins');window.location.reload();}
+	}
+	if((cc0==cc1)&&(cc0==cc2))
+	{
+		if(cc0!=""&&cc1!=""&&cc2!=""){
+		alert('bingo  '+cc0+'  wins');window.location.reload();}
+	}
+	if((aa0==bb1)&&(aa0==cc2))
+	{
+		if(aa0!=""&&bb1!=""&&cc2!=""){
+		alert('bingo  '+aa0+'  wins');window.location.reload();}
+	}
+	if((aa2==bb1)&&(aa2==cc0))
+	{
+		if(aa2!=""&&bb1!=""&&cc0!=""){
+		alert('bingo  '+aa2+'   wins');window.location.reload();}
+	}
+	
+	}
+	if(i>=10)
+	{
+		alert('DRAW');
+        window.location.reload();
+	}
+}
+
+
+ 
+ 
+	 
+	
+</script>
+
+<style>
+table{
+	background-color:black;
+	border-color:red;
+    
+    padding: 1em;
+    overflow: hidden;
+}
+input[type=button]
+{
+	color:darkblue;
+	background-color:yellow;
+	border:red;
+}
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+nav {
+    float: left;
+    max-width: 100px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+<header>
+   <h1>XO XO PLAY!</h1>
+</header>
+<br>
+<nav>
+  <ul>
+    <li><b><h2>MULTIPALYER GAME</h2></b></li>
+    <li><b>PASS 'N' PLAY GAME </b></li>
+    <li><b> JUST FOR ENTERTAINMENT</b></li>
+  </ul>
+</nav>
+
+<center>
+<table border="5px" row="3" cellpadding="50px"  width="250" height="450" class="table" >
+<tr>
+<td  height="10px" width="50px"><input type="button" style="width:150px;height:130px;font-size:60px" id="a0" value="" onclick="game(1);bingo();"></td>
+<td ><input type="button" style="width:150px;height:130px;font-size:60px" id="a1" value="" onclick="game(2);bingo();"> </td>
+<td ><input type="button" style="width:150px;height:130px;font-size:60px" id="a2" value="" onclick="game(3);bingo();"></td>
+</tr>
+<tr>
+<td ><input type="button" style="width:150px;height:130px;font-size:60px" id="b0" value="" onclick="game(4);bingo();"></td>
+<td ><input type="button" style="width:150px;height:130px;font-size:60px" id="b1" value="" onclick="game(5);bingo();"></td>
+<td ><input type="button" style="width:150px;height:130px;font-size:60px" id="b2" value="" onclick="game(6);bingo();"></td>
+</tr>
+<tr>
+<td ><input type="button" style="width:150px;height:130px;font-size:60px" id="c0" value="" onclick="game(7);bingo();"></td>
+<td ><input type="button" style="width:150px;height:130px;font-size:60px" id="c1" value="" onclick="game(8);bingo();"></td>
+<td ><input type="button" style="width:150px;height:130px;font-size:60px" id="c2" value="" onclick="game(9);bingo();"></td>
+</tr>
+</table>
+</center>
+<br>
+<footer>---DEVELOPED BY  R.DHANAPAL ---</footer>
+</div>
+</body>
+</html>

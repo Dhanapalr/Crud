@@ -1,0 +1,22 @@
+{
+  "name": "kpkcable",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "devstart": "nodemon index.js"
+  },
+  "author": "Dhanapal",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "exceljs": "^4.2.0",
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "joi": "^17.2.1",
+    "mongoose": "^5.10.9",
+    "mongoose-to-csv": "^0.1.1",
+    "nodemon": "^2.0.6"
+  }
+}
